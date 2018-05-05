@@ -5,11 +5,12 @@
         "php": "^5.6 || ^7.0",
         "ext-curl": "*",
         "abraham/twitteroauth": "dev-master",
-        "league/route": "3.0.*"
+        "league/route": "3.0.*",
+        "zendframework/zend-diactoros": "^1.7"
     },
     "autoload": {
         "psr-4": {
-            "lrf141\\Pawn\\": "src"
+            "lrf141\\Pawn\\": "public/"
         }
     }
 }
