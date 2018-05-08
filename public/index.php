@@ -1,13 +1,12 @@
 <?php
 
 require '../vendor/autoload.php';
-use lrf141\Pawn\Controller\Page;
-use League\Route\RouteGroup;
+require './controller/Page.php';
 
+use League\Route\RouteGroup;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-global $container;
 global $router;
 
 $container = new League\Container\Container;
@@ -27,6 +26,7 @@ $router->map('GET', '/', function (ServerRequestInterface $request, ResponseInte
         $response->getBody()->write('<h1>Hello, World!</h1>');
         return $response;
 });
+$router->map('GET', '/index', 'Page::index');
 
 $response = $router->dispatch($container->get('request'), $container->get('response'));
 $container->get('emitter')->emit($response);
