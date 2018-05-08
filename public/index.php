@@ -13,7 +13,11 @@ $container = new League\Container\Container;
 $container->share('response', Zend\Diactoros\Response::class);
 $container->share('request', function () {
     return Zend\Diactoros\ServerRequestFactory::fromGlobals(
-        $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES
+        $_SERVER,
+        $_GET,
+        $_POST,
+        $_COOKIE,
+        $_FILES
     );
 });
 
@@ -23,8 +27,8 @@ $container->share('emitter', Zend\Diactoros\Response\SapiEmitter::class);
 $router = new \League\Route\RouteCollection($container);
 
 $router->map('GET', '/', function (ServerRequestInterface $request, ResponseInterface $response) {
-        $response->getBody()->write('<h1>Hello, World!</h1>');
-        return $response;
+    $response->getBody()->write('<h1>Hello, World!</h1>');
+    return $response;
 });
 $router->map('GET', '/index', 'Page::index');
 
