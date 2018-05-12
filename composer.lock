@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59b9a0a64ea027dd9e3f4acca71730ee",
-    "content-hash": "53eccf39f9156b724825cb1aa68dd576",
+    "hash": "20a0c3cc085749844e4bd404c344c163",
+    "content-hash": "0eafd0fa2309efe18f0f7275e07c601a",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -220,6 +220,47 @@
                 "route"
             ],
             "time": "2017-03-22 09:09:41"
+        },
+        {
+            "name": "lrf141/rook",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lrf141/rook.git",
+                "reference": "284ff1d0ce543f94bfc6f01e32b585dbc7535307"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lrf141/rook/zipball/284ff1d0ce543f94bfc6f01e32b585dbc7535307",
+                "reference": "284ff1d0ce543f94bfc6f01e32b585dbc7535307",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.11",
+                "phpunit/phpunit": "^7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lrf141\\Rook\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "lrf141",
+                    "email": "ghost141.kentyo@gmail.com"
+                }
+            ],
+            "description": "A simple template engine written in PHP",
+            "time": "2018-05-12 06:00:56"
         },
         {
             "name": "nikic/fast-route",

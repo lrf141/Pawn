@@ -6,7 +6,8 @@
         "ext-curl": "*",
         "abraham/twitteroauth": "dev-master",
         "league/route": "3.0.*",
-        "zendframework/zend-diactoros": "^1.7"
+        "zendframework/zend-diactoros": "^1.7",
+        "lrf141/rook": "^1.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.3"
