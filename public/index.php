@@ -1,7 +1,7 @@
 <?php
 
-require '../vendor/autoload.php';
-require './controller/Page.php';
+require_once '../vendor/autoload.php';
+require_once './controller/Page.php';
 
 use League\Route\RouteGroup;
 use Psr\Http\Message\ResponseInterface;
@@ -30,7 +30,7 @@ $router->map('GET', '/', function (ServerRequestInterface $request, ResponseInte
     $response->getBody()->write('<h1>Hello, World!</h1>');
     return $response;
 });
-$router->map('GET', '/index', 'Page::index');
+$router->map('GET', '/index', Lrf141\Pawn\Controller\Page::class . '::index');
 
 $response = $router->dispatch($container->get('request'), $container->get('response'));
 $container->get('emitter')->emit($response);
