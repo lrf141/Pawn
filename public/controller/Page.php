@@ -1,13 +1,21 @@
 <?php
 
+namespace Lrf141\Pawn\Controller;
+
+require_once 'model/TwitterModel.php';
+
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+
+use Lrf141\Rook\Engine;
+use Lrf141\Pawn\Model\TwitterModel;
 
 class Page
 {
     public function index(ServerRequestInterface $request, ResponseInterface $response)
     {
-        $response->getBody()->write('<h1>The Best Beer Ever.</h1>');
+        $twitter = new TwitterModel();
+        $response->getBody()->write('<h1>twitter:'.$twitter->requestGetHomeTimeLine().": </h1>");
         return $response;
     }
 }
