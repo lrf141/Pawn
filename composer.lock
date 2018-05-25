@@ -260,11 +260,7 @@
                 }
             ],
             "description": "A simple template engine written in PHP",
-<<<<<<< HEAD
-            "time": "2018-05-12 06:00:56"
-=======
             "time": "2018-05-13 05:40:52"
->>>>>>> c0d2d269c647901f357994a0317718860778808d
         },
         {
             "name": "nikic/fast-route",

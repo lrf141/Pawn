@@ -9,7 +9,6 @@ require_once 'key.php';
 
 class TwitterModel
 {
-
     private $consumer = KEY::CONSUMER;
     private $consumerSecret = KEY::CONSUMER_SECRET;
 
@@ -20,9 +19,9 @@ class TwitterModel
     public function oauthRequest(string $url, array $param = [], string $method = 'GET')
     {
         $result = null;
-        try{
+        try {
             $connection = new TwitterOAuth($this->consumer, $this->consumerSecret, $this->accessToken, $this->accessTokenSecret);
-            switch($method){
+            switch ($method) {
             case 'GET':
                 $result = $connection->get($url, $param);
                 break;
@@ -30,8 +29,7 @@ class TwitterModel
                 $result = $connection->post($url, $param);
                 break;
             }
-
-        }catch(TwitterOAuthException $err){
+        } catch (TwitterOAuthException $err) {
         }
         return $result;
     }
@@ -42,5 +40,4 @@ class TwitterModel
         $timeline = $this->oauthRequest('statuses/home_timeline');
         return $timeline;
     }
-
 }
