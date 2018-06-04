@@ -15,7 +15,12 @@ class Page
     public function index(ServerRequestInterface $request, ResponseInterface $response)
     {
         $twitter = new TwitterModel();
-        $response->getBody()->write('<h1>twitter :'.strval($twitter->requestGetHomeTimeLine()).": </h1>");
+
+        $engine = new Engine('./template/tweet');
+        foreach($twitter->requestGetHomeTimeLine() as $tweet)
+        {
+            $response->getBody()->write($engine->render('timeline', ['tweet' => $tweet]));
+        }
         return $response;
     }
 }
