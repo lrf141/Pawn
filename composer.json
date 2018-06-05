@@ -13,10 +13,11 @@
         "friendsofphp/php-cs-fixer": "^2.3"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Lrf141\\Pawn\\": "public/",
             "Lrf141\\Pawn\\Controller\\": "public/controller/",
-            "Lrf141\\Pawn\\Model\\": "public/model/"
+            "Lrf141\\Pawn\\Model\\": "public/model/",
+            "Lrf141\\Pawn\\View\\": "public/view/"
         }
     }
 }
