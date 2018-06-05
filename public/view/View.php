@@ -27,5 +27,4 @@ class View
     {
         echo $this->engine->render('profile', ['user' => $user]);
     }
-
 }

@@ -32,15 +32,13 @@ class Page
 
     public function index(ServerRequestInterface $request, ResponseInterface $response)
     {
-
         $engine = new Engine('./template/tweet');
         $me = $this->twitter->requestAccountData();
 
-        ob_start(); 
+        ob_start();
         $this->view->simple_profile($me);
 
-        foreach($this->twitter->requestGetHomeTimeLine() as $tweet)
-        {
+        foreach ($this->twitter->requestGetHomeTimeLine() as $tweet) {
             echo $engine->render('timeline', ['tweet' => $tweet]);
         }
 
