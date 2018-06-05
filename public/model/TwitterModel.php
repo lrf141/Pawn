@@ -40,4 +40,10 @@ class TwitterModel
         $timeline = $this->oauthRequest('statuses/home_timeline');
         return $timeline;
     }
+
+    public function requestAccountData()
+    {
+        $user = $this->oauthRequest('account/verify_credentials');
+        return $user;
+    }
 }
