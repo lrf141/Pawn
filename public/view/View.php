@@ -2,6 +2,8 @@
 
 namespace Lrf141\Pawn\View;
 
+require_once './config.php';
+
 use Lrf141\Rook\Engine;
 
 class View

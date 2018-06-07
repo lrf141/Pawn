@@ -3,7 +3,7 @@
 <div class='profile'>
     <img src="<?= $user->profile_image_url ?>">
     <div class='user_status'>
-        <div><a><?= $user->name ?> @<?= $user->screen_name ?><a></div>
+        <div><a href="<?= $this->_link('/profile') ?>"><?= $user->name ?> @<?= $user->screen_name ?></a></div>
         <div><?= $user->description ?></div>
         <div>tweets: <?= $user->statuses_count ?></div>
         <div>follows: <?= $user->friends_count ?></div>

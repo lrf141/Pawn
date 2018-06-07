@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "20a0c3cc085749844e4bd404c344c163",
+    "hash": "7379b826bc3621c4adc55d32dddaa728",
     "content-hash": "0eafd0fa2309efe18f0f7275e07c601a",
     "packages": [
         {
@@ -223,16 +223,16 @@
         },
         {
             "name": "lrf141/rook",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lrf141/rook.git",
-                "reference": "ee7e14082e01b8b55346e7cbfa6203cb3db01528"
+                "reference": "06f8f5397f940ec3dc16da7227ad83c63703219f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lrf141/rook/zipball/ee7e14082e01b8b55346e7cbfa6203cb3db01528",
-                "reference": "ee7e14082e01b8b55346e7cbfa6203cb3db01528",
+                "url": "https://api.github.com/repos/lrf141/rook/zipball/06f8f5397f940ec3dc16da7227ad83c63703219f",
+                "reference": "06f8f5397f940ec3dc16da7227ad83c63703219f",
                 "shasum": ""
             },
             "require": {
@@ -260,7 +260,7 @@
                 }
             ],
             "description": "A simple template engine written in PHP",
-            "time": "2018-05-13 05:40:52"
+            "time": "2018-06-05 14:38:19"
         },
         {
             "name": "nikic/fast-route",
